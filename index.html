@@ -19,6 +19,7 @@
             background-color: grey;
             color:white;
             text-align: center;}
+        input{margin:10px}
     </style>
     
 </head>
@@ -45,17 +46,26 @@
             <a   href="https://www.linkedin.com/in/estebanpiazza/" target="blank">Mi linkedin</a>
 
         </div>
-
-            
-    
-    
-
-            
-
-            
-    
-    
+       
+</div>
+<div class="container">
+    <h1>Calcular regla de 3</h1>
+    <input type="text" id="1"><input type="text" id="2"><br>
+    <input type="text" id="3"> <button onclick="calcularReglade3()">Calcular</button><br>
+    <p id="4" style="color:white">Resultado:</p>
 </div>
 </body>
 <div class="footer">Usa software legal siempre ❤️</div>
+<script>
+    function calcularReglade3(){
+        let valor1 = document.getElementById("1").value
+        
+        let valor2 = document.getElementById("2").value
+        
+        let valor3 = document.getElementById("3").value
+        
+        let resultado = valor3 * valor2 /  valor1
+        document.getElementById("4").innerText="Resultado: "+ resultado
+    }
+</script>
 </html>
