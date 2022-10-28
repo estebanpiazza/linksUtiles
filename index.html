@@ -53,8 +53,8 @@
             <h4>Paso a paso configuracion inicial</h4>
             <a   href="https://ninite.com" target="blank"> 1) Ninite: instalador automatico de programas</a>
             <a   href="https://www.iobit.com/es/driver-booster.php" target="blank">2) Driver Booster</a>
-            <a href="https://drive.google.com/drive/folders/1Y8qZ7ltVGohQAfbxnFVvDqSWI0Ua5LRf?usp=sharing" target="blank">3) Office 64 bits español descarga directa</a>
-            <a href="https://drive.google.com/drive/folders/10Hoz3HwSGzbu_XcZal5KI9BA7H62fNyg?usp=sharing" target="blank">3) Office 32 bits español descarga directa</a>
+            <a href="https://drive.google.com/drive/folders/1Y8qZ7ltVGohQAfbxnFVvDqSWI0Ua5LRf?usp=sharing" target="blank" id="office64">3) Office 64 bits español descarga directa</a>
+            <a href="https://drive.google.com/drive/folders/10Hoz3HwSGzbu_XcZal5KI9BA7H62fNyg?usp=sharing" target="blank" id="office32">3) Office 32 bits español descarga directa</a>
             <a href="https://drive.google.com/file/d/1Vg8fTTZiEqvDUUfZx_tTPZU4Y6RbEznZ/view?usp=sharing" target="blank">4) KMSpico (activador Office/Windows)(contraseña: 12345)</a>
        
           
@@ -136,9 +136,13 @@
     if (navigator.userAgent.indexOf("WOW64") != -1 || 
         navigator.userAgent.indexOf("Win64") != -1 ){
        document.getElementById("so").innerText="Windows 64 bits"
+       document.getElementById("office64").style="color:green;"
+       document.getElementById("office32").style="color:red;"
     } else if((navigator.userAgent.indexOf("WOW32") != -1 || 
         navigator.userAgent.indexOf("Win32") != -1 )) {
           document.getElementById("so").innerText="Windows 32 bits"
+          document.getElementById("office64").style="color:red;"
+       document.getElementById("office32").style="color:green;"
     }
     
 </script>
