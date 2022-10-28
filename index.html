@@ -36,14 +36,17 @@
         a:link, a:visited{color:grey}
         *{color:grey}
     </style>
+
     
 </head>
-<>
+
     
 
     
     <div class="container">
+      El sistema operativo es: <span id="so"> no se pudo determinar </span>
       <div class="row"><h1 style="color:white">Links: </h1>
+        
         </div>  
       
           <details><hr> <summary>Software</summary>
@@ -116,6 +119,7 @@
     <a href="https://contacto-alpha.vercel.app" target="_blank">
       <button class="feedback">Contacto</button></a>
   </div>
+
 </body>
 
 <script>
@@ -129,6 +133,14 @@
         let resultado = valor3 * valor2 /  valor1
         document.getElementById("4").innerText="Resultado: "+ resultado
     }
-   
+    if (navigator.userAgent.indexOf("WOW64") != -1 || 
+        navigator.userAgent.indexOf("Win64") != -1 ){
+       document.getElementById("so").innerText="Windows 64 bits"
+    } else if((navigator.userAgent.indexOf("WOW32") != -1 || 
+        navigator.userAgent.indexOf("Win32") != -1 )) {
+          document.getElementById("so").innerText="Windows 32 bits"
+    }
+    
 </script>
+
 </html>
