@@ -1,151 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links utiles</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        .feedback {
-  background-color : #31B0D5;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: #46b8da;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links utiles</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script defer src="qr.js"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+  integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
-#mybutton {
-  position: fixed;
-  bottom: -4px;
-  right: 10px;
-}
-        body{background-color: black;}
-        h1{color:grey}
-        a{margin:10px}
-        .footer {
-            position: absolute;
-            right: 0;
-            bottom: 0;    
-            left: 0;
-            padding: 1rem;
-            background-color: grey;
-            color:white;
-            text-align: center;}
-        input{margin:10px}
-        a:link, a:visited{color:grey}
-        *{color:grey}
-    </style>
+  <style>
+    .feedback {
+      background-color: #31B0D5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border-color: #46b8da;
+    }
 
-    
+    #mybutton {
+      position: fixed;
+      bottom: -4px;
+      right: 10px;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    h1 {
+      color: grey
+    }
+
+    a {
+      margin: 10px
+    }
+
+    .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      background-color: grey;
+      color: white;
+      text-align: center;
+    }
+
+    input {
+      margin: 10px
+    }
+
+    a:link,
+    a:visited {
+      color: grey
+    }
+
+    * {
+      color: grey
+    }
+  </style>
+
+
 </head>
 
-    
 
-    
-    <div class="container">
-      El sistema operativo es: <span id="so"> no se pudo determinar </span>
-      <div class="row"><h1 style="color:white">Links: </h1>
-        
-        </div>  
-      
-          <details><hr> <summary>Software</summary>
-            <h4>Paso a paso configuracion inicial</h4>
-            <a   href="https://ninite.com" target="blank"> 1) Ninite: instalador automatico de programas</a>
-            <a   href="https://www.iobit.com/es/driver-booster.php" target="blank">2) Driver Booster</a>
-            <a href="https://drive.google.com/drive/folders/1Y8qZ7ltVGohQAfbxnFVvDqSWI0Ua5LRf?usp=sharing" target="blank" id="office64">3) Office 64 bits español descarga directa</a>
-            <a href="https://drive.google.com/drive/folders/10Hoz3HwSGzbu_XcZal5KI9BA7H62fNyg?usp=sharing" target="blank" id="office32">3) Office 32 bits español descarga directa</a>
-            <a href="https://drive.google.com/file/d/1Vg8fTTZiEqvDUUfZx_tTPZU4Y6RbEznZ/view?usp=sharing" target="blank">4) KMSpico (activador Office/Windows)(contraseña: 12345)</a>
-       
-          
-        <br>
-        <h4>Torrents</h4>
 
-        <a href="https://thepiratebay.party/torrent/14240388/Microsoft_Office_2016_VL_ProPlus_Spanish_(x86-x64)_March_2016"  target="blank"> Torrent Office Español 32/64 bits</a>
-          <a href="https://thepiratebay10.org/torrent/12518179/Microsoft_Office_2016_VL_ProPlus_Visio_Project_64-bit" target="blank">Torrent Office 2016 64</a> 
-          <a href="https://thepiratebay10.org/torrent/12518172/Microsoft_Office_2016_VL_ProPlus_Visio_Project_32-bit" target="blank">Torrent Office 2016 32</a> 
 
-          <a href="https://www.bittorrent.com/es/" target="blank">BitTorrent</a> 
-          <br>
-          <h4>Varios          </h4>
+<div class="container">
+  El sistema operativo es: <span id="so"> no se pudo determinar </span>
+  <div class="row">
+    <h1 style="color:white">Links: </h1>
 
-            <a   href="https://www.7-zip.org" target="blank">7zip</a> 
-            <a   href="https://ebiblioteca.org/lecturas/" target="blank">eBiblioteca</a> 
-            <a href="https://www.google.com/intl/es-419/chrome/" target="_blank">Chrome</a>
-            <a href="https://www.opera.com/es/browsers/opera?utm_campaign=%2300%20-%20WW%20-%20Search%20-%20EN%20-%20Branded&gclid=Cj0KCQiAmKiQBhClARIsAKtSj-mZ40iP5F6h14aNC3sLzRhZ-tMwGuIltb2yB_gSSibybU4qeXSOCcYaAqQZEALw_wcB" target="_blank">Opera</a>
-            <a href="https://drive.google.com/file/d/1VoB5r06lRmi7CMUVlqlzzpZGZlINH_Me/view?usp=sharing" target="_blank">PwClean</a>
-            <br>
-            <a href="https://drive.google.com/drive/folders/1KYGiXNeAo00uNTLW9Iw7enbwWSd_1rhm?usp=sharing">Photoshop</a>
-            <a href="https://drive.google.com/drive/folders/1OY5Lhlz1PcPd4KOZNODihiwMSOs7chlP?usp=sharing">Illustrator</a>
-            <a href="https://drive.google.com/drive/folders/1OTYOF9Eazy2TMMWDS2Hy80YyXMmBl0HS?usp=sharing">In design</a>
-            <a href="https://drive.google.com/file/d/1cXpjfNfuT9uyIzgpiNrD_5Zx29pC7QLS/view?usp=sharing">Autocad</a>
-            <a href="https://drive.google.com/file/d/1ZaiMm6q2blhT43tGVHT_11N7NLn-6YUN/view?usp=sharing">Movie Maker</a>
-        </details>   
-        
+  </div>
 
-        
-        
-            <details>
-                <summary>Datos personales</summary>
-                <hr>
-                <a   href="https://docs.google.com/document/d/1sdztdYxQE_H5OBIyaYhkO8CQ_WoBHJ2lupDDQ59YOgY/edit?usp=sharing" target="blank">Mi CV Profesor</a>
-                <a   href="https://docs.google.com/document/d/16Vr90ZkzfXKapgcouQG7WKOfMBh4WOvKzdJXrsP8K8Y/edit?usp=sharing" target="blank">Mi CV Programador</a>
-            <a   href="https://www.linkedin.com/in/estebanpiazza/" target="_blank">Mi linkedin</a>
-             <hr>
-            </details>
-    <details>
-        <summary>Limerick</summary> <hr>
-        <a   href="https://www.laclasedigital.com.ar/Descargas/Calibrador%20THSCREEN-%20Lite.rar" target="blank">Calibrador Pizarras THScreen</a>
-        <a href="https://drive.google.com/file/d/1SGKlAX1XmtWnff47GOOW03EPT_sgySpM/view?usp=sharing" target="blank"> Calibrador Avanzado Piazarras THScreen</a>
-        <a href="https://drive.google.com/drive/folders/171TbfX7sExm4VsLUZVFMFcyDUt-c53At?usp=sharing" target="blank">Impresora 3D</a>
-        <hr>
-    </details>
+  <details>
+    <hr>
+    <summary>Software</summary>
+    <h4>Paso a paso configuracion inicial</h4>
+    <a href="https://ninite.com" target="blank"> 1) Ninite: instalador automatico de programas</a>
+    <a href="https://www.iobit.com/es/driver-booster.php" target="blank">2) Driver Booster</a>
+    <a href="https://drive.google.com/drive/folders/1Y8qZ7ltVGohQAfbxnFVvDqSWI0Ua5LRf?usp=sharing" target="blank"
+      id="office64">3) Office 64 bits español descarga directa</a>
+    <a href="https://drive.google.com/drive/folders/10Hoz3HwSGzbu_XcZal5KI9BA7H62fNyg?usp=sharing" target="blank"
+      id="office32">3) Office 32 bits español descarga directa</a>
+    <a href="https://drive.google.com/file/d/1Vg8fTTZiEqvDUUfZx_tTPZU4Y6RbEznZ/view?usp=sharing" target="blank">4)
+      KMSpico (activador Office/Windows)(contraseña: 12345)</a>
+
+
+    <br>
+    <h4>Torrents</h4>
+
+    <a href="https://thepiratebay.party/torrent/14240388/Microsoft_Office_2016_VL_ProPlus_Spanish_(x86-x64)_March_2016"
+      target="blank"> Torrent Office Español 32/64 bits</a>
+    <a href="https://thepiratebay10.org/torrent/12518179/Microsoft_Office_2016_VL_ProPlus_Visio_Project_64-bit"
+      target="blank">Torrent Office 2016 64</a>
+    <a href="https://thepiratebay10.org/torrent/12518172/Microsoft_Office_2016_VL_ProPlus_Visio_Project_32-bit"
+      target="blank">Torrent Office 2016 32</a>
+
+    <a href="https://www.bittorrent.com/es/" target="blank">BitTorrent</a>
+    <br>
+    <h4>Varios </h4>
+
+    <a href="https://www.7-zip.org" target="blank">7zip</a>
+    <a href="https://ebiblioteca.org/lecturas/" target="blank">eBiblioteca</a>
+    <a href="https://www.google.com/intl/es-419/chrome/" target="_blank">Chrome</a>
+    <a href="https://www.opera.com/es/browsers/opera?utm_campaign=%2300%20-%20WW%20-%20Search%20-%20EN%20-%20Branded&gclid=Cj0KCQiAmKiQBhClARIsAKtSj-mZ40iP5F6h14aNC3sLzRhZ-tMwGuIltb2yB_gSSibybU4qeXSOCcYaAqQZEALw_wcB"
+      target="_blank">Opera</a>
+    <a href="https://drive.google.com/file/d/1VoB5r06lRmi7CMUVlqlzzpZGZlINH_Me/view?usp=sharing"
+      target="_blank">PwClean</a>
+    <br>
+    <a href="https://drive.google.com/drive/folders/1KYGiXNeAo00uNTLW9Iw7enbwWSd_1rhm?usp=sharing">Photoshop</a>
+    <a href="https://drive.google.com/drive/folders/1OY5Lhlz1PcPd4KOZNODihiwMSOs7chlP?usp=sharing">Illustrator</a>
+    <a href="https://drive.google.com/drive/folders/1OTYOF9Eazy2TMMWDS2Hy80YyXMmBl0HS?usp=sharing">In design</a>
+    <a href="https://drive.google.com/file/d/1cXpjfNfuT9uyIzgpiNrD_5Zx29pC7QLS/view?usp=sharing">Autocad</a>
+    <a href="https://drive.google.com/file/d/1ZaiMm6q2blhT43tGVHT_11N7NLn-6YUN/view?usp=sharing">Movie Maker</a>
+  </details>
 
 
 
 
+  <details>
+    <summary>Datos personales</summary>
+    <hr>
+    <a href="https://docs.google.com/document/d/1sdztdYxQE_H5OBIyaYhkO8CQ_WoBHJ2lupDDQ59YOgY/edit?usp=sharing"
+      target="blank">Mi CV Profesor</a>
+    <a href="https://docs.google.com/document/d/16Vr90ZkzfXKapgcouQG7WKOfMBh4WOvKzdJXrsP8K8Y/edit?usp=sharing"
+      target="blank">Mi CV Programador</a>
+    <a href="https://www.linkedin.com/in/estebanpiazza/" target="_blank">Mi linkedin</a>
+    <hr>
+  </details>
+  <details>
+    <summary>Limerick</summary>
+    <hr>
+    <a href="https://www.laclasedigital.com.ar/Descargas/Calibrador%20THSCREEN-%20Lite.rar" target="blank">Calibrador
+      Pizarras THScreen</a>
+    <a href="https://drive.google.com/file/d/1SGKlAX1XmtWnff47GOOW03EPT_sgySpM/view?usp=sharing" target="blank">
+      Calibrador Avanzado Piazarras THScreen</a>
+    <a href="https://drive.google.com/drive/folders/171TbfX7sExm4VsLUZVFMFcyDUt-c53At?usp=sharing"
+      target="blank">Impresora 3D</a>
+    <hr>
+  </details>
 
-    <details>
-    <summary >Regla de 3</summary>
-    
-    
+
+
+
+
+  <details>
+    <summary>Regla de 3</summary>
+
+
     <input type="text" id="1">_____<input type="text" id="2"><br>
     <input type="text" id="3">_____ <button onclick="calcularReglade3()">Calcular</button><br>
     <p id="4" style="color:white">Resultado:</p>
-</details>
+  </details>
+  <details>
+    <summary>Generador de codigos QR</summary>
+    <div class="flex flex-col-reverse align-center justify-content m-auto md:max-w-4xl md:flex-row mt-24 p-10">
+      <div id="Generate">
+        <form id="Form">
+          <input id="formData" type="text" placeholder="Ingresa el valor"/>
+
+          <button id="button" class="btn-primary">
+            Generar QR
+          </button>
+        </form>
+      </div>
+
+    </div>
+    <!-- Where the generated QR code will be. -->
+    <div id="qr-code" class="m-auto"></div>
+    </form>
+  </details>
 </div>
 </div>
 <div class="footer">Usa software legal siempre ❤️<br>Por Esteban Piazza</div>
 <div id="mybutton">
-    <a href="https://contacto-alpha.vercel.app" target="_blank">
-      <button class="feedback">Contacto</button></a>
-  </div>
+  <a href="https://contacto-alpha.vercel.app" target="_blank">
+    <button class="feedback">Contacto</button></a>
+</div>
 
 </body>
 
 <script>
-    function calcularReglade3(){
-        let valor1 = document.getElementById("1").value
-        
-        let valor2 = document.getElementById("2").value
-        
-        let valor3 = document.getElementById("3").value
-        
-        let resultado = valor3 * valor2 /  valor1
-        document.getElementById("4").innerText="Resultado: "+ resultado
-    }
-    if (navigator.userAgent.indexOf("WOW64") != -1 || 
-        navigator.userAgent.indexOf("Win64") != -1 ){
-       document.getElementById("so").innerText="Windows 64 bits"
-       document.getElementById("office64").style="color:green;"
-       document.getElementById("office32").style="color:red;"
-    } else if((navigator.userAgent.indexOf("WOW32") != -1 || 
-        navigator.userAgent.indexOf("Win32") != -1 )) {
-          document.getElementById("so").innerText="Windows 32 bits"
-          document.getElementById("office64").style="color:red;"
-       document.getElementById("office32").style="color:green;"
-    }
-    
+  function calcularReglade3() {
+    let valor1 = document.getElementById("1").value
+
+    let valor2 = document.getElementById("2").value
+
+    let valor3 = document.getElementById("3").value
+
+    let resultado = valor3 * valor2 / valor1
+    document.getElementById("4").innerText = "Resultado: " + resultado
+  }
+  if (navigator.userAgent.indexOf("WOW64") != -1 ||
+    navigator.userAgent.indexOf("Win64") != -1) {
+    document.getElementById("so").innerText = "Windows 64 bits"
+    document.getElementById("office64").style = "color:green;"
+    document.getElementById("office32").style = "color:red;"
+  } else if ((navigator.userAgent.indexOf("WOW32") != -1 ||
+    navigator.userAgent.indexOf("Win32") != -1)) {
+    document.getElementById("so").innerText = "Windows 32 bits"
+    document.getElementById("office64").style = "color:red;"
+    document.getElementById("office32").style = "color:green;"
+  }
+
 </script>
 
 </html>
