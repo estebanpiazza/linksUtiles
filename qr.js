@@ -1,4 +1,4 @@
-const form = document.querySelector("#Form");
+/* const form = document.querySelector("#Form");
 const qrCode = document.querySelector("#qr-code");
  
 const generateSubmit = (e) => {
@@ -28,4 +28,4 @@ const clearQR = () => {
   qrCode.innerHTML = "";
 };
  
-form.addEventListener("submit", generateSubmit);
+form.addEventListener("submit", generateSubmit); */
