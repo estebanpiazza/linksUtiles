@@ -179,6 +179,13 @@
     <div id="qr-code" class="m-auto"></div>
     </form>
   </details>
+  <details>
+    <summary>Calculadora diferencia en porcentajes</summary>
+      Primer numero:<input type="text" name="" id="primerNumero"><br>
+      Segundo numero: <input type="text" name="" id="segundoNumero">
+      <button id="calcularPorcentaje">Calcular</button><br>
+      Resultado: <p id="resultadoPorcentaje"></p>
+  </details>
 </div>
 </div>
 <div class="footer">Usa software legal siempre ❤️<br>Por Esteban Piazza</div>
@@ -190,6 +197,22 @@
 </body>
 
 <script>
+let botonCalcular = document.getElementById("calcularPorcentaje")
+
+function calcularDiferencia(){
+    let valorA = document.getElementById("primerNumero").value;
+  let valorB = document.getElementById("segundoNumero").value;
+  valorA = Math.abs(valorA)
+  valorB = Math.abs(valorB)
+  resultado = ((valorA-valorB)/((valorA+valorB)/2))*100
+document.getElementById("resultadoPorcentaje").innerText = Math.abs(resultado).toFixed(2)
+
+  }
+
+
+botonCalcular.addEventListener("click", function(){
+calcularDiferencia()
+})
   function calcularReglade3() {
     let valor1 = document.getElementById("1").value
 
