@@ -17,11 +17,11 @@
 ></script>
 
   <style>
-    #qrcode {
+     #qrcode {
   width:160px;
   height:160px;
   margin:50px;
-}
+} 
     .feedback {
       background-color: #31B0D5;
       color: white;
@@ -30,11 +30,7 @@
       border-color: #46b8da;
     }
 
-    #mybutton {
-      position: fixed;
-      bottom: -4px;
-      right: 10px;
-    }
+
 
     body {
       background-color: black;
@@ -48,17 +44,17 @@
       margin: 10px
     }
 
-    .footer {
-      position: absolute;
-      right: 0;
+     .footer {
+      position: fixed;
       bottom: 0;
-      left: 0;
+      right: 0;
+      margin-top: 25px;
       padding: 1rem;
       background-color: grey;
       color: white;
       text-align: center;
     }
-
+ 
     input {
       margin: 10px
     }
@@ -175,42 +171,53 @@
       Resultado: <p id="resultadoPorcentaje"></p>
   </details>
   <details>
+    
     <summary>Generador de codigos QR</summary>
-    <input id="text" type="text" placeholder="Ingrese su codigo" style="width:80%" /><br />
+    <input id="text" type="text" placeholder="Ingrese su codigo" style="width:50%" /><br />
     <button id="generarQR">Generar</button>
-    <div id="qrcode" style="border:25px solid white;background-color: white; display:block;min-width:300px;min-height: 300px;"></div>
+    <div id="qrcode" ></div>
   </details>
 </div>
 </div>
 
-<div class="footer" id="footer">Usa software legal siempre ❤️<br>Por Esteban Piazza</div>
-<div id="mybutton">
+<div class="footer" id="footer">Usa software legal siempre ❤️<br>Por Esteban Piazza
   <a href="https://contacto-alpha.vercel.app" target="_blank">
-    <button class="feedback">Contacto</button></a>
+    <button class="feedback">Contacto</button></a></div>
+<div id="mybutton">
+
 </div>
 
 </body>
 
 <script>
      
-  document.getElementById("generarQR").addEventListener("click",function(){
-    document.getElementById("footer").style.display="none"
-    var qrcode = new QRCode("qrcode");
+     document.getElementById("generarQR").addEventListener("click", function() {
+    // Selecciona el contenedor del QR Code
+    var qrContainer = document.getElementById("qrcode");
+    
+    // Limpia el contenido del contenedor del QR Code
+    qrContainer.innerHTML = '';
+    
+    // Crea una nueva instancia de QRCode dentro del contenedor limpio
+    var qrcode = new QRCode(qrContainer);
 
-function makeCode () {    
-  var elText = document.getElementById("text");
-  
-  if (!elText.value) {
-    alert("Input a text");
-    elText.focus();
-    return;
-  }
-  
-  qrcode.makeCode(elText.value);
-}
+    function makeCode() {
+        var elText = document.getElementById("text");
 
-makeCode();
-})
+        if (!elText.value) {
+            alert("Ingrese un texto");
+            elText.focus();
+            return;
+        }
+
+        // Genera el QR Code con el nuevo valor
+        qrcode.makeCode(elText.value);
+    }
+
+    // Llama a la función que genera el código
+    makeCode();
+});
+
 
 
 let botonCalcular = document.getElementById("calcularPorcentaje")
