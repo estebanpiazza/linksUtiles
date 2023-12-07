@@ -227,7 +227,7 @@ function calcularDiferencia(){
   let valorB = document.getElementById("segundoNumero").value;
   valorA = Math.abs(valorA)
   valorB = Math.abs(valorB)
-  resultado = ((valorA-valorB)/((valorA+valorB)/2))*100
+  resultado = ((valorA-valorB)/valorA)*100
 document.getElementById("resultadoPorcentaje").innerText = Math.abs(resultado).toFixed(2)
 
   }
