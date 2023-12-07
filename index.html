@@ -17,11 +17,41 @@
 ></script>
 
   <style>
-     #qrcode {
-  width:160px;
-  height:160px;
-  margin:50px;
-} 
+    .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+
     .feedback {
       background-color: #31B0D5;
       color: white;
@@ -163,14 +193,19 @@
     <p id="4" style="color:white">Resultado:</p>
   </details>
 
-  <details>
-    <summary>Calculadora diferencia en porcentajes</summary>
-      Primer numero:<input type="text" name="" id="primerNumero"><br>
-      Segundo numero: <input type="text" name="" id="segundoNumero">
-      <button id="calcularPorcentaje">Calcular</button><br>
-      Resultado: <p id="resultadoPorcentaje"></p>
-  </details>
-  <details>
+<details>
+  <summary>Generador de codigos QR</summary>
+  <input id="text" type="text" placeholder="Ingrese su codigo" style="width:50%" /><br />
+  <button id="generarQR">Generar</button>
+</details>
+
+<!-- Estructura básica de un modal -->
+<div id="qrModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="qrcode"></div>
+  </div>
+</div>
     
     <summary>Generador de codigos QR</summary>
     <input id="text" type="text" placeholder="Ingrese su codigo" style="width:50%" /><br />
@@ -191,7 +226,7 @@
 
 <script>
      
-     document.getElementById("generarQR").addEventListener("click", function() {
+document.getElementById("generarQR").addEventListener("click", function() {
     // Selecciona el contenedor del QR Code
     var qrContainer = document.getElementById("qrcode");
     
@@ -200,23 +235,41 @@
     
     // Crea una nueva instancia de QRCode dentro del contenedor limpio
     var qrcode = new QRCode(qrContainer);
-
+    
     function makeCode() {
         var elText = document.getElementById("text");
-
         if (!elText.value) {
             alert("Ingrese un texto");
             elText.focus();
             return;
         }
-
         // Genera el QR Code con el nuevo valor
         qrcode.makeCode(elText.value);
     }
 
     // Llama a la función que genera el código
     makeCode();
+    
+    // Muestra el modal
+    var modal = document.getElementById("qrModal");
+    modal.style.display = "block";
+    
+    // Obtiene el elemento <span> que cierra el modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // Cuando el usuario hace clic en <span> (x), cierra el modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // Cuando el usuario hace clic en cualquier lugar fuera del modal, lo cierra
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
+
 
 
 
