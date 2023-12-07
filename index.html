@@ -29,17 +29,25 @@
     flex-direction: column;
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
-    margin: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%); /* Centrado vertical */
+    position: fixed;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 80%; /* Mayor anchura para dispositivos más pequeños */
+    }
 }
 
 /* Estilos para el botón de cierre */
 .close {
     color: #aaaaaa;
-    position: absolute; /* Posición absoluta dentro de '.modal-content' */
-    right: 10px; /* A la derecha del contenedor */
-    top: 10px; /* Arriba del contenedor */
+    position: absolute;
+    right: 10px;
+    top: 10px;
     font-size: 28px;
     font-weight: bold;
 }
@@ -51,16 +59,19 @@
     cursor: pointer;
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 600px) {
-    .modal-content {
-        width: 80%; /* Mayor anchura para dispositivos más pequeños */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Centrado vertical y horizontal */
-    }
+/* Estilos para el botón de descargar */
+.descargar-qr {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
+.descargar-qr:hover {
+    background-color: darkblue;
+}
 
 
 
@@ -251,8 +262,8 @@ document.getElementById("generarQR").addEventListener("click", function() {
     
     var qrcode = new QRCode(qrContainer, {
         text: "placeholder",
-        width: 128,
-        height: 128,
+        width: 256,
+        height: 256,
         colorDark : "#000000",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
