@@ -51,7 +51,7 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
-
+}
     .feedback {
       background-color: #31B0D5;
       color: white;
@@ -78,6 +78,7 @@
       position: fixed;
       bottom: 0;
       right: 0;
+      width: 100%;
       margin-top: 25px;
       padding: 1rem;
       background-color: grey;
@@ -193,25 +194,19 @@
     <p id="4" style="color:white">Resultado:</p>
   </details>
 
-<details>
-  <summary>Generador de codigos QR</summary>
-  <input id="text" type="text" placeholder="Ingrese su codigo" style="width:50%" /><br />
-  <button id="generarQR">Generar</button>
-</details>
-
-<!-- Estructura básica de un modal -->
-<div id="qrModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div id="qrcode"></div>
-  </div>
-</div>
-    
+  <details>
     <summary>Generador de codigos QR</summary>
     <input id="text" type="text" placeholder="Ingrese su codigo" style="width:50%" /><br />
     <button id="generarQR">Generar</button>
-    <div id="qrcode" ></div>
   </details>
+  
+  <!-- Estructura básica de un modal -->
+  <div id="qrModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="qrcode"></div>
+    </div>
+  </div>
 </div>
 </div>
 
