@@ -17,16 +17,21 @@
 ></script>
 
   <style>
-
 /* Estilos para el contenido del modal */
 .modal-content {
     background-color: darkgrey;
-    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Ajusta el ancho según tus necesidades */
     text-align: center; /* Alinea el contenido al centro */
     position: relative; /* Importante para posicionar absolutamente la 'X' de cierre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%); /* Centrado vertical */
 }
 
 /* Estilos para el botón de cierre */
@@ -46,15 +51,15 @@
     cursor: pointer;
 }
 
-/* Centrar verticalmente el contenido del modal */
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 80%; /* Mayor anchura para dispositivos más pequeños */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrado vertical y horizontal */
+    }
 }
-
-
 
 
 
@@ -308,7 +313,7 @@ calcularDiferencia()
     let valor3 = document.getElementById("3").value
 
     let resultado = valor3 * valor2 / valor1
-    document.getElementById("4").innerText = "Resultado: " + resultado
+    document.getElementById("4").innerText = "Resultado: " + resultado.toFixed(2)
   }
   if (navigator.userAgent.indexOf("WOW64") != -1 ||
     navigator.userAgent.indexOf("Win64") != -1) {
