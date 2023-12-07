@@ -245,12 +245,18 @@
 </body>
 
 <script>
-     
-     document.getElementById("generarQR").addEventListener("click", function() {
+document.getElementById("generarQR").addEventListener("click", function() {
     var qrContainer = document.getElementById("qrcode");
     qrContainer.innerHTML = ''; // Limpia el contenido del contenedor del QR Code
     
-    var qrcode = new QRCode(qrContainer); // Crea una nueva instancia de QRCode
+    var qrcode = new QRCode(qrContainer, {
+        text: "placeholder",
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    }); // Crea una nueva instancia de QRCode
     
     function makeCode() {
         var elText = document.getElementById("text");
@@ -261,28 +267,40 @@
         }
 
         // Asegúrate de que el texto ingresado comience con "http://" o "https://"
-        var textToEncode = elText.value;
-        if (!textToEncode.startsWith('http://') && !textToEncode.startsWith('https://')) {
-            textToEncode = 'http://' + textToEncode; // Agrega "http://" si no está presente
-        }
+        var textToEncode = elText.value.startsWith('http://') || elText.value.startsWith('https://') 
+                           ? elText.value 
+                           : 'http://' + elText.value;
 
         qrcode.makeCode(textToEncode); // Genera el QR Code
     }
 
     makeCode(); // Llama a la función que genera el código
-    
+
     var modal = document.getElementById("qrModal");
     modal.style.display = "block"; // Muestra el modal
 
+    // Oscurece el fondo
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
     var span = document.getElementsByClassName("close")[0]; 
-    // Obtiene el elemento <span> que cierra el modal
-    
-    span.onclick = function() { modal.style.display = "none"; } // Cierra el modal al hacer clic en <span>
-    window.onclick = function(event) { // Cierra el modal al hacer clic fuera
+    span.onclick = function() { 
+        modal.style.display = "none"; 
+        document.body.style.backgroundColor = ""; // Restaura el color de fondo original
+    }
+
+    window.onclick = function(event) { 
         if (event.target == modal) {
             modal.style.display = "none";
+            document.body.style.backgroundColor = ""; // Restaura el color de fondo original
         }
     }
+
+    // Función para hacer descargable el QR
+    var descargarQR = document.createElement('a');
+    descargarQR.textContent = 'Descargar QR';
+    descargarQR.download = 'codigoQR.png';
+    descargarQR.href = qrContainer.querySelector('img').src;
+    qrContainer.appendChild(descargarQR);
 });
 
 
